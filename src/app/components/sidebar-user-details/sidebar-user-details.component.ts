@@ -87,7 +87,7 @@ export class SidebarUserDetailsComponent implements OnInit, OnChanges {
 
   subcribeToAuthStateChanged() {
     this.messagingAuthService.BSAuthStateChanged.subscribe((state) => {
-      this.logger.log('[SIDEBAR-USER-DETAILS] BSAuthStateChanged ', state)
+     this.logger.log('[SIDEBAR-USER-DETAILS] BSAuthStateChanged ', state)
 
       if (state === 'online') {
         const storedCurrentUser = this.appStorageService.getItem('currentUser')
@@ -281,7 +281,7 @@ export class SidebarUserDetailsComponent implements OnInit, OnChanges {
   listenToCurrentStoredProject() {
     this.events.subscribe('storage:last_project', projectObjct => {
       if (projectObjct && projectObjct !== 'undefined') {
-        // console.log('[SIDEBAR-USER-DETAILS] - GET STORED PROJECT ', projectObjct)
+        // this.logger.log('[SIDEBAR-USER-DETAILS] - GET STORED PROJECT ', projectObjct)
 
         //TODO: recuperare info da root e non da id_project
         this.project = {
@@ -309,7 +309,7 @@ export class SidebarUserDetailsComponent implements OnInit, OnChanges {
 
     try {
       this.tiledeskToken = this.appStorageService.getItem('tiledeskToken');
-      // console.log('[SIDEBAR-USER-DETAILS] - GET STORED TOKEN ', this.tiledeskToken)
+      // this.logger.log('[SIDEBAR-USER-DETAILS] - GET STORED TOKEN ', this.tiledeskToken)
     } catch (err) {
       this.logger.error('[SIDEBAR-USER-DETAILS] - GET STORED TOKEN ', err)
     }
@@ -346,7 +346,7 @@ export class SidebarUserDetailsComponent implements OnInit, OnChanges {
 
         if (projectUser) {
           if (projectUser['user_available'] === false && projectUser['profileStatus'] === 'inactive') {
-            // console.log('teammateStatus ', this.teammateStatus) 
+            // this.logger.log('teammateStatus ', this.teammateStatus) 
             this.selectedStatus = this.teammateStatus[2].id;
             this.logger.debug('[SIDEBAR-USER-DETAILS] - PROFILE_STATUS selected option', this.teammateStatus[2].name);
             this.teammateStatus = this.teammateStatus.slice(0)
