@@ -8,6 +8,9 @@
 ### **Copyrigth**: 
 *Tiledesk SRL*
 
+# 3.4.24 in PROD
+- **changed**: fullname in info message replaced with firstname
+
 # 3.4.23 in PROD
 
 # 3.4.23-rc3
