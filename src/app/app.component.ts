@@ -44,6 +44,7 @@ import { conversationToMessage } from 'src/chat21-core/utils/utils-message';
 import { ProjectService } from './services/projects/project.service';
 import { ContactsService } from './services/contacts/contacts.service';
 import { TiledeskService } from './services/tiledesk/tiledesk.service';
+import { Project } from 'src/chat21-core/models/projects';
 
 @Component({
   selector: 'app-root',
@@ -1193,6 +1194,7 @@ export class AppComponent implements OnInit {
       this.initArchivedConversationsHandler(currentUser.uid);
       this.segmentSignIn()
     }
+    
     this.checkPlatform();
     try {
       this.logger.debug('[APP-COMP] ************** closeModal', this.authModal);
