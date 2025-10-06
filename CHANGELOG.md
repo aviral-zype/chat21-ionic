@@ -8,6 +8,9 @@
 ### **Copyrigth**: 
 *Tiledesk SRL*
 
+# 3.4.25 in PROD
+- **changed**: pipe marked to support malicious text input
+
 # 3.4.24 in PROD
 - **changed**: fullname in info message replaced with firstname
 
