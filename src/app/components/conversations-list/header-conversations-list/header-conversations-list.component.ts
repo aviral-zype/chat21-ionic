@@ -85,23 +85,6 @@ export class HeaderConversationsList implements OnInit {
     this.events.publish('profileInfoButtonClick:changed', 'displayArchived')
   }
 
-  // PRESENT MODAL CREATE TICKET
-  // async presentCreateTicketModal(): Promise<any>{
-
-  //   // const attributes = {  enableBackdropDismiss: false };
-  //   const modal: HTMLIonModalElement =
-  //     await this.modalController.create({
-  //       component: CreateTicketPage,
-  //       // componentProps: attributes,
-  //       swipeToClose: false,
-  //       backdropDismiss: false
-  //     });
-  //   modal.onDidDismiss().then((detail: any) => {
-  //     console.log('[DDP-HEADER] ', detail.data);
-  //   });
-  //   return await modal.present();
-  // }
-
   async presentCreateTicketModal() {
     // const attributes = {  enableBackdropDismiss: false };
     const modal = await this.modalController.create({
