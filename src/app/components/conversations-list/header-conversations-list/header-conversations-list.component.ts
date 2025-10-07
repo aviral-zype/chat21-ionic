@@ -16,6 +16,7 @@ export class HeaderConversationsList implements OnInit {
   @Input() writeto_btn: boolean
   @Input() sound_btn: string;
   @Input() isMobile: boolean;
+  @Input() isVisibleTKT: boolean = true;
   @Output() onSoundChange = new EventEmitter<string>()
   @Output() openContactsDirectory = new EventEmitter()
   @Output() openProfileInfo = new EventEmitter()
